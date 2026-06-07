@@ -44,54 +44,6 @@ Visualiser les véhicules sélectionnés Retirer un véhicule de la sélection A
 
 En cas d'absence de serveur, le site fonctionne en fallback localStorage (comme avant).
 
-# 📌 Note importante pour tester le site 
-
-## ⚠️ Le site doit être ouvert via XAMPP et NON depuis le bureau
-
-Pour tester toutes les fonctionnalités du site (inscription, connexion, panier, base de données),
-il faut obligatoirement suivre ces étapes :
-
-## 🛠️ Étapes d'installation
-
-### 1. Installer XAMPP
-- Télécharger XAMPP : https://www.apachefriends.org/fr/index.html
-- Installer et ouvrir le **XAMPP Control Panel**
-- Cliquer **Start** sur **Apache** ✅
-- Cliquer **Start** sur **MySQL** ✅
-
-### 2. Importer la base de données
-- Ouvrir **phpMyAdmin** : http://localhost/phpmyadmin
-- Cliquer sur **"Importer"**
-- Sélectionner le fichier **`luxe_auto_database.sql`**
-- Cliquer **"Exécuter"**
-
-### 3. Copier le dossier du site
-- Copier le dossier **`web`** dans **`C:\xampp\htdocs\`**
-
-### 4. Ouvrir le site
-- Ouvrir Chrome ou Firefox
-- Taper dans la barre d'adresse :
-  
-http://localhost/web
-
-## ✅ Pages à tester
-
-| Page | Adresse |
-|---|---|
-| Accueil | http://localhost/web/ |
-| Catalogue | http://localhost/web/content/produits.html |
-| Inscription | http://localhost/web/content/inscription.html |
-| Connexion | http://localhost/web/content/connexion.html |
-| Panier | http://localhost/web/content/panier.html |
-
----
-
-## ❌ Ne pas ouvrir le site depuis le bureau
-
-Si vous ouvrez les fichiers HTML directement depuis le bureau, le PHP et la base de données ne fonctionneront pas.
-Il faut **obligatoirement** passer par   http://localhost/web/
-
----
 
 *Projet réalisé par 
 
