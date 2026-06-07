@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails voiture</title>
+    <link rel="stylesheet" href="../style/main.css">
+</head>
+
+<body>
+
+<nav>
+    <ul class="nav-links">
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="produits.html">Voitures</a></li>
+        <li><a href="panier.html">Panier 🛒</a></li>
+    </ul>
+</nav>
+
+<section class="detail-page">
+    <div class="detail-card">
+        <div class="detail-image-card">
+            <img id="voiture-image" src="" alt="Voiture Luxe Auto">
+        </div>
+        <div class="detail-info-card">
+            <span class="detail-badge" id="voiture-marque">BMW</span>
+            <h1 id="voiture-titre">Détails voiture</h1>
+            <p id="voiture-description"></p>
+            <div class="detail-features">
+                <div class="feature-box price-box">
+                    <div class="feature-icon">💰</div>
+                    <div class="feature-content">
+                        <span class="feature-label">Prix</span>
+                        <p id="voiture-prix" class="feature-value"></p>
+                    </div>
+                </div>
+                
+                <div class="feature-box engine-box">
+                    <div class="feature-icon">⚙️</div>
+                    <div class="feature-content">
+                        <span class="feature-label">Moteur</span>
+                        <p id="voiture-moteur" class="feature-value"></p>
+                    </div>
+                </div>
+                
+                <div class="feature-box power-box">
+                    <div class="feature-icon">⚡</div>
+                    <div class="feature-content">
+                        <span class="feature-label">Puissance</span>
+                        <p id="voiture-chevaux" class="feature-value"></p>
+                    </div>
+                </div>
+                
+                <div class="feature-box torque-box">
+                    <div class="feature-icon">💪</div>
+                    <div class="feature-content">
+                        <span class="feature-label">Couple</span>
+                        <p id="voiture-couple" class="feature-value"></p>
+                    </div>
+                </div>
+                
+                <div class="feature-box acceleration-box">
+                    <div class="feature-icon">🚀</div>
+                    <div class="feature-content">
+                        <span class="feature-label">0-100 km/h</span>
+                        <p id="voiture-zero100" class="feature-value"></p>
+                    </div>
+                </div>
+                
+                <div class="feature-box speed-box">
+                    <div class="feature-icon">🏁</div>
+                    <div class="feature-content">
+                        <span class="feature-label">Vitesse max</span>
+                        <p id="voiture-vitesse" class="feature-value"></p>
+                    </div>
+                </div>
+            </div>
+            <p class="detail-biography" id="voiture-biographie"></p>
+            <div class="detail-actions">
+                <button class="btn btn-primary" onclick="ajouterAuPanier()">Ajouter au panier</button>
+                <a class="btn btn-secondary" href="produits.html">Retour aux voitures</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="../javascript/produits.js"></script>
+<script src="../javascript/voiture-detail.js"></script>
+
+</body>
+</html>

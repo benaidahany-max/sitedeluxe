@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panier</title>
+    <link rel="stylesheet" href="../style/main.css">
+</head>
+<body>
+
+<nav>
+    <ul class="nav-links">
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="produits.html">Voitures</a></li>
+        <li><a href="panier.html">Panier 🛒</a></li>
+    </ul>
+</nav>
+
+<section class="page-header">
+    <div>
+        <p class="eyebrow">Mon panier</p>
+        <h1>Votre sélection premium</h1>
+        <p class="page-subtitle">Vérifiez les détails, retirez un véhicule ou confirmez votre réservation en toute simplicité.</p>
+    </div>
+</section>
+
+<section id="panier-container" class="cart-list"></section>
+
+<section class="cart-summary" id="actions-container"></section>
+
+<div id="payment-modal" class="modal">
+    <div class="modal-content">
+        <h2>💳 Paiement sécurisé</h2>
+        <input type="text" id="card-name" placeholder="Nom sur la carte">
+        <input type="text" id="card-number" placeholder="Numéro de carte (factice)">
+        <input type="text" id="card-date" placeholder="MM/AA">
+        <input type="text" id="card-cvv" placeholder="CVV">
+        <div class="modal-actions">
+            <button onclick="confirmerPaiement()" class="btn btn-primary">Payer</button>
+            <button onclick="fermerModal()" class="btn btn-secondary">Annuler</button>
+        </div>
+    </div>
+</div>
+
+<script src="../javascript/panier.js"></script>
+
+</body>
+</html>

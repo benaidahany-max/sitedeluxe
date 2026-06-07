@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Voitures</title>
+    <link rel="stylesheet" href="../style/main.css">
+</head>
+
+<body>
+
+<nav>
+    <ul class="nav-links">
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="produits.html">Voitures</a></li>
+        <li><a href="panier.html">Panier 🛒 <span id="cart-count" class="cart-count">0</span></a></li>
+    </ul>
+    <div class="luxe-auto-logo">
+        <img src="../image/logo.jpeg.jpeg" alt="Logo Luxe Auto" class="logo-img" />
+        LUXE AUTO
+    </div>
+</nav>
+
+<script src="../javascript/navbar-sticky.js"></script>
+<script src="../javascript/navbar-bg-scroll.js"></script>
+
+<header class="page-header page-header-premium">
+    <div class="header-overlay"></div>
+    <div class="header-content">
+        <p class="eyebrow">Catalogue Complet</p>
+        <h1>Notre Collection de Prestige</h1>
+        <p class="page-subtitle">Explorez une sélection minutieuse de véhicules premium : BMW, Volkswagen, Audi et Skoda. Performance, confort et innovation technologique.</p>
+    </div>
+</header>
+
+<section class="filters-section">
+    <div class="filters-container">
+        <div class="filter-group">
+            <h3>Marques</h3>
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filtrer('Tous')">Tous les modèles</button>
+                <button class="filter-btn" onclick="filtrer('Audi')">Audi</button>
+                <button class="filter-btn" onclick="filtrer('BMW')">BMW</button>
+                <button class="filter-btn" onclick="filtrer('Volkswagen')">Volkswagen</button>
+                <button class="filter-btn" onclick="filtrer('Skoda')">Skoda</button>
+            </div>
+        </div>
+        <div class="search-group">
+            <h3>Recherche</h3>
+            <input type="text" id="search" class="search-input" placeholder="Rechercher un modèle..." onkeyup="rechercher()" />
+        </div>
+    </div>
+</section>
+
+<section id="produits-container" class="products-grid"></section>
+
+<section class="drag-section">
+    <div class="drag-content">
+        <h2><i class="fas fa-shopping-cart"></i> Ajouter au Panier</h2>
+        <p>Glissez une voiture ici pour l'ajouter à votre panier</p>
+        <div id="panier-drop" class="drop-zone" ondragover="allowDrop(event)" ondrop="drop(event)">
+            <i class="fas fa-arrow-down"></i>
+            <span>Déposez un véhicule ici</span>
+        </div>
+    </div>
+</section>
+
+<script src="../javascript/produits.js"></script>
+
+</body>
+</html>

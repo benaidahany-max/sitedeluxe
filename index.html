@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxe Auto</title>
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="content/produits.html">Voitures</a></li>
+            <li><a href="content/inscription.html">Inscription</a></li>
+            <li><a href="content/connexion.html">Connexion</a></li>
+            <li><a href="content/panier.html">Panier 🛒</a></li>
+        </ul>
+        <div class="luxe-auto-logo">
+            <img src="image/logo.jpeg.jpeg" alt="Logo Luxe Auto" class="logo-img" />
+            LUXE AUTO
+        </div>
+    </nav>
+
+    <script src="javascript/navbar-sticky.js"></script>
+    <script src="javascript/navbar-bg-scroll.js"></script>
+
+    <section class="hero hero-modern">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="video/videovoiture.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la vidéo.
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content hero-content-large">
+            <p class="eyebrow">Excellence Automobile</p>
+            <h1>LUXE AUTO</h1>
+            <p>Votre partenaire de confiance pour l'acquisition de véhicules premium. BMW, Volkswagen, Audi et Skoda sélectionnés avec expertise.</p>
+            <div class="hero-actions">
+                <a href="content/produits.html" class="btn btn-primary">Découvrir nos véhicules</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="showcase show-case-hero">
+        <div class="showcase-content">
+            <p class="showcase-label">Modèle en vedette</p>
+            <h2 class="showcase-title">BMW iX3</h2>
+            <p class="showcase-subtitle">Innovation technologique et efficacité énergétique pour un luxe responsable.</p>
+            <div class="showcase-buttons">
+                <button onclick="window.location.href='content/voiture-detail.html?id=21'" class="btn btn-primary">Consulter cette offre</button>
+                <button onclick="window.location.href='content/produits.html'" class="btn btn-secondary">Parcourir le catalogue</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="brands">
+        <h2 class="fade-in">Nos marques de prestige</h2>
+        <div class="brand-list">
+            <div class="brand brand-premium">Audi</div>
+            <div class="brand brand-premium">BMW</div>
+            <div class="brand brand-premium">Volkswagen</div>
+            <div class="brand brand-premium">Skoda</div>
+        </div>
+    </section>
+
+    <section class="benefits-section">
+        <h2>Pourquoi choisir LUXE AUTO ?</h2>
+        <div class="benefits-container">
+            <div class="benefit-item">
+                <div class="benefit-icon"><i class="fas fa-check-circle"></i></div>
+                <h3>Sélection rigoureuse</h3>
+                <p>Chaque véhicule est inspecté et certifié pour garantir la qualité premium.</p>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3>Garantie complète</h3>
+                <p>Protection intégrale et assurance tous risques inclus dans nos offres.</p>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon"><i class="fas fa-cog"></i></div>
+                <h3>Service après-vente</h3>
+                <p>Support technique et maintenance disponible 24h/24, 7j/7.</p>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon"><i class="fas fa-handshake"></i></div>
+                <h3>Transparence</h3>
+                <p>Tarification claire et sans frais cachés, conseil expert gratuit.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section stats-modern">
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-number">2 000+</div>
+                <div class="stat-label">Clients satisfaits</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">20+</div>
+                <div class="stat-label">Véhicules premium</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">15 ans</div>
+                <div class="stat-label">D'expérience</div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="contact-footer">
+        <div class="contact-container">
+            <div class="contact-item">
+                <i class="fas fa-phone contact-emoji"></i>
+                <a href="tel:+33123456789" class="contact-link">+33 1 23 45 67 89</a>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-whatsapp contact-emoji"></i>
+                <a href="https://wa.me/33123456789" target="_blank" class="contact-link">WhatsApp</a>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-instagram contact-emoji"></i>
+                <a href="https://instagram.com/luxeauto" target="_blank" class="contact-link">@luxeauto</a>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt contact-emoji"></i>
+                <a href="https://maps.google.com/?q=45.1885,5.7245" target="_blank" class="contact-link">Grenoble</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

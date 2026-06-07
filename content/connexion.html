@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Connexion</title>
+    <link rel="stylesheet" href="../style/main.css">
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="inscription.html">Inscription</a></li>
+    </ul>
+</nav>
+
+<section class="auth-page">
+    <div class="auth-card fade-in">
+        <h1>Bienvenue</h1>
+        <p>Connectez-vous pour accéder à votre compte et retrouver votre panier.</p>
+
+        <div id="auth-message" class="auth-message"></div>
+
+        <form onsubmit="connexion(event)" class="form">
+            <div class="auth-input-group">
+                <input type="email" id="email" placeholder="Email" required>
+            </div>
+            <div class="auth-input-group">
+                <input type="password" id="password" placeholder="Mot de passe" required>
+                <button type="button" class="toggle-password" onclick="togglePassword('password')">Voir</button>
+            </div>
+            <button type="submit" class="btn">Se connecter</button>
+        </form>
+
+        <div class="auth-footer">
+            <span>Pas encore de compte ?</span>
+            <a href="inscription.html">S'inscrire</a>
+        </div>
+    </div>
+</section>
+
+<script src="../javascript/user.js"></script>
+
+</body>
+</html>
