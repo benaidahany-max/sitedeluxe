@@ -26,7 +26,8 @@ Visualiser les véhicules sélectionnés Retirer un véhicule de la sélection A
 
 🛠️ Technologies utilisées TechnologieUtilisationHTML5Structure des pagesCSS3Mise en forme et design responsiveJavaScriptInteractions dynamiques (panier, filtres, drag & drop)GitHub PagesHébergement du site
 
-📁 Structure du projet sitee/ │ ├── index.html # Page d'accueil │ ├── content/ │ ├── produits.html # Catalogue des voitures │ ├── inscription.html # Formulaire d'inscription │ ├── connexion.html # Page de connexion │ └── panier.html # Panier d'achat │ ├── image/ │ └── logo.jpeg.jpeg # Logo du site │ └── video/ └── videovoiture.mp4 # Vidéo d'accueil
+📁 Structure du projet sitee/ │ ├── index.html # Page d'accueil │ ├── content/ │ ├── produits.html # Catalogue des voitures │ ├── inscription.html # Formulaire d'inscription │ ├── connexion.html # Page de connexion │ └── panier.html # Panier d'achat │ ├── image/ │ └── logo.jpeg.jpeg # Logo du site │ └── video/ └── videovoiture.mp4 # Vidéo d'accueil └── screenshot.png
+
 
 ✨ Fonctionnalités principales
 
