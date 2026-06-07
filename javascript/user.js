@@ -44,14 +44,15 @@ async function validerInscription(e) {
     const prenom = parts[0];
     const nomFam = parts.slice(1).join(" ") || prenom;
 
-    const formData = new FormData();
-    formData.append("nom",                  nomFam);
-    formData.append("prenom",               prenom);
-    formData.append("email",                email);
-    formData.append("mot_de_passe",         pass);
-    formData.append("mot_de_passe_confirm", confirm);
-
+    // Tentative via PHP
     try {
+        const formData = new FormData();
+        formData.append("nom",                  nomFam);
+        formData.append("prenom",               prenom);
+        formData.append("email",                email);
+        formData.append("mot_de_passe",         pass);
+        formData.append("mot_de_passe_confirm", confirm);
+
         const response = await fetch(`${API_URL}?action=inscription`, {
             method: "POST",
             body: formData
@@ -61,12 +62,22 @@ async function validerInscription(e) {
         if (data.succes) {
             showMessage(data.message, "success");
             setTimeout(() => { window.location.href = "connexion.html"; }, 1200);
+            return;
         } else {
             showMessage(data.erreur || "Erreur lors de l'inscription.", "error");
+            return;
         }
     } catch (err) {
-        showMessage("Impossible de contacter le serveur.", "error");
+        // Fallback localStorage si PHP pas disponible
+        inscrireLocalStorage(nom, email, pass);
     }
+}
+
+function inscrireLocalStorage(nom, email, pass) {
+    const user = { nom, email, pass };
+    localStorage.setItem("user", JSON.stringify(user));
+    showMessage("Inscription réussie ! Redirection en cours...", "success");
+    setTimeout(() => { window.location.href = "connexion.html"; }, 1200);
 }
 
 // ============================================================
@@ -81,11 +92,12 @@ async function connexion(e) {
 
     if (!email || !pass) { showMessage("Veuillez remplir tous les champs.", "error"); return; }
 
-    const formData = new FormData();
-    formData.append("email",        email);
-    formData.append("mot_de_passe", pass);
-
+    // Tentative via PHP
     try {
+        const formData = new FormData();
+        formData.append("email",        email);
+        formData.append("mot_de_passe", pass);
+
         const response = await fetch(`${API_URL}?action=connexion`, {
             method: "POST",
             body: formData,
@@ -97,11 +109,28 @@ async function connexion(e) {
             localStorage.setItem("user", JSON.stringify(data.utilisateur));
             showMessage("Connexion réussie ! Redirection...", "success");
             setTimeout(() => { window.location.href = "../index.html"; }, 900);
+            return;
         } else {
             showMessage(data.erreur || "Email ou mot de passe incorrect.", "error");
+            return;
         }
     } catch (err) {
-        showMessage("Impossible de contacter le serveur.", "error");
+        // Fallback localStorage si PHP pas disponible
+        connecterLocalStorage(email, pass);
+    }
+}
+
+function connecterLocalStorage(email, pass) {
+    const user = JSON.parse(localStorage.getItem("user"));
+    if (!user) {
+        showMessage("Aucun compte trouvé. Inscrivez-vous d'abord.", "error");
+        return;
+    }
+    if (user.email === email && user.pass === pass) {
+        showMessage("Connexion réussie ! Redirection...", "success");
+        setTimeout(() => { window.location.href = "../index.html"; }, 900);
+    } else {
+        showMessage("Email ou mot de passe incorrect.", "error");
     }
 }
 
